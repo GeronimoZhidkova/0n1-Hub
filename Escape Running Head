@@ -1,0 +1,217 @@
+-- // Boot Library \\ --
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/mag"))()
+
+-- // Functions & Values \\ --
+
+function Destroy()
+
+game.CoreGui:FindFirstChild("MagikHax"):Destroy()
+
+end
+
+-- // Create Tabs \\ --
+
+local tab1 = Library.Category("Information", "Information", Color3.fromRGB(0, 204, 204))
+
+local tab2 = Library.Category("Begin", "Begin", Color3.fromRGB(0, 204, 204))
+
+local tab3 = Library.Category("End", "End", Color3.fromRGB(0, 204, 204))
+
+local tab4 = Library.Category("Player & Game", "Player & Game", Color3.fromRGB(0, 204, 204))
+
+-- // Define tab1 \\ --
+
+tab1:Section("Current Place")
+
+tab1:Button(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,function()
+
+    setclipboard(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)    
+
+end)
+
+tab1:Section("Credits")
+
+tab1:Button("Copy Discord Invite", function()
+
+    setclipboard("https://discord.gg/UnjnNVx6Tp")
+
+end)
+
+tab1:Button("YouTube Channel", function()
+
+    setclipboard("https://youtube.com/@geronimozhidkova")
+
+end)
+
+-- // Define tab2 \\ --
+
+tab2:Section("Begin Teleports")
+
+tab2:Button("Stage 1",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(143, 64, 17))
+
+end)
+
+tab2:Button("Stage 2",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-680, 4, -95))
+
+end)
+
+tab2:Button("Stage 3",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(147, 82, 11))
+
+end)
+
+tab2:Button("Stage 4",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-291, 24, 2))
+
+end)
+
+tab2:Button("Stage 5",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1277, 51, -65))
+
+end)
+
+tab2:Button("Stage 6",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-674, 4, -95))
+
+end)
+
+tab2:Button("Stage 7",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(67, 25, 374))
+
+end)
+
+tab2:Button("Stage 8",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(44, 48, 1026))
+
+end)
+
+tab2:Button("Stage 9",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(44, 50, 396))
+
+end)
+
+-- // Define tab3 \\ --
+
+tab3:Section("End Teleports")
+
+tab3:Button("Stage 1",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-381, 13, 2))
+
+end)
+
+tab3:Button("Stage 2",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1090, 4, 36))
+
+end)
+
+tab3:Button("Stage 3",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-344, 16, -6))
+
+end)
+
+tab3:Button("Stage 4",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-683, 118, -97))
+
+end)
+
+tab3:Button("Stage 5",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1599, 46, -75))
+
+end)
+
+tab3:Button("Stage 6",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1422, 4, -53))
+
+end)
+
+tab3:Button("Stage 7",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1684, 18, 372))
+
+end)
+
+tab3:Button("Stage 8",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(42, 49, -1171))
+
+end)
+
+tab3:Button("Stage 9",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1843, 44, -496))
+
+end)
+
+-- // Define tab4 \\ --
+
+tab4:Section("Player")
+
+tab4:Box("Walk Speed","",function(pws)
+
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = pws
+
+end)
+
+tab4:Box("Jump Power","",function(pjp)
+
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = pjp
+
+end)
+
+tab4:Box("Hip Height","",function(phh)
+
+   game.Players.LocalPlayer.Character.Humanoid.HipHeight = phh     
+
+end)
+
+tab4:Box("Gravity","",function(pg)
+
+   game.Workspace.Gravity = pg  
+
+end)
+
+tab4:Section("Game")
+
+tab4:Button("Anti Kick", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/FPfaukXN"))()
+
+end)
+
+tab4:Button("Low Graphics", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/8QZGBLW8"))()
+
+end)
+
+tab4:Button("RTX",  function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/vmjZ4UY8"))()
+
+end)
+
+tab4:Section("UI")
+
+tab4:Button("Destroy UI", function()
+
+    Destroy()
+
+end)

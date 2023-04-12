@@ -1,0 +1,277 @@
+-- // Boot Library \\ --
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/mag"))()
+
+-- // Functions & Values \\ --
+
+function Destroy()
+
+game.CoreGui:FindFirstChild("MagikHax"):Destroy()
+
+end
+
+-- // Create Tabs \\ --
+
+local tab1 = Library.Category("Information", "Information", Color3.fromRGB(0, 204, 204))
+
+local tab2 = Library.Category("Games", "Games", Color3.fromRGB(0, 204, 204))
+
+local tab3 = Library.Category("Executors", "Executors", Color3.fromRGB(0, 204, 204))
+
+local tab4 = Library.Category("Player & Game", "Player & Game", Color3.fromRGB(0, 204, 204))
+
+-- // Define tab1 \\ --
+
+tab1:Section("Current Place")
+
+tab1:Button(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,function()
+
+    setclipboard(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)    
+
+end)
+
+tab1:Section("Credits")
+
+tab1:Button("Copy Discord Invite", function()
+
+    setclipboard("https://discord.gg/UnjnNVx6Tp")
+
+end)
+
+tab1:Button("YouTube Channel", function()
+
+    setclipboard("https://youtube.com/@geronimozhidkova")
+
+end)
+
+-- // Define tab2 \\ --
+
+tab2:Section("Supported Games")
+
+tab2:Button("Natural Disaster Survival", function()
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Games",
+
+            Text = "Loading Natural Disaster Survival..."
+
+        })
+
+        wait(0.5)
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Natural%20Disaster%20Survival"))()
+
+end)
+
+tab2:Button("Legends Of Speed", function()
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+        Title = "Games",
+
+        Text = "Loading Legends of Speed..."
+
+    })
+
+    wait(0.5)
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Legends%20Of%20Speed"))()
+
+end)
+
+tab2:Button("Escape Running Head", function()
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Games",
+
+            Text = "Loading Escape Running Head..."
+
+        })
+
+        wait(0.5)
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Escape%20Running%20Head"))()
+
+end)
+
+tab2:Button("Broken Bones IV", function()
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Games",
+
+            Text = "Loading Broken Bones IV..."
+
+        })
+
+        wait(0.5)
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Broken%20Bones%20IV"))()
+
+end)
+
+tab2:Button("Prison Life", function()
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Games",
+
+            Text = "Loading Prison Life..."
+
+        })
+
+        wait(0.5)
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Prison%20Life"))()
+
+end)
+
+tab2:Button("Easy Stud Jump Obby", function()
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Games",
+
+            Text = "Loading Easy Stud Jumps Obby..."
+
+        })
+
+        wait(0.5)
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Easy%20Stud%20Jumps%20Obby"))()
+
+end)
+
+tab2:Button("Glass Bridge Obby", function()
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Games",
+
+            Text = "Loading Impossible Glass Bridge Obby..."
+
+        })
+
+        wait(0.5)
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Impossible%20Glass%20Bridge%20Obby"))()
+
+end)
+
+-- // Define tab2 \\ --
+
+tab3:Section("Mobile")
+
+tab3:Button("Delta",function()
+
+    
+
+end)
+
+tab3:Button("Fluxus",function()
+
+    
+
+end)
+
+tab3:Button("Hydrogen",function()
+
+    
+
+end)
+
+tab3:Section("PC")
+
+tab3:Button("Synapse X",function()
+
+    
+
+end)
+
+tab3:Button("KRNL",function()
+
+    
+
+end)
+
+tab3:Button("JJSploit",function()
+
+    
+
+end)
+
+tab3:Button("Delta",function()
+
+    
+
+end)
+
+tab3:Button("Evon",function()
+
+    
+
+end)
+
+tab3:Button("Fluxus",function()
+
+    
+
+end)
+
+-- // Define tab4 \\ --
+
+tab4:Section("Player")
+
+tab4:Box("Walk Speed","",function(pws)
+
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = pws
+
+end)
+
+tab4:Box("Jump Power","",function(pjp)
+
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = pjp
+
+end)
+
+tab4:Box("Hip Height","",function(phh)
+
+   game.Players.LocalPlayer.Character.Humanoid.HipHeight = phh     
+
+end)
+
+tab4:Box("Gravity","",function(pg)
+
+   game.Workspace.Gravity = pg  
+
+end)
+
+tab4:Section("Game")
+
+tab4:Button("Anti Kick", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/FPfaukXN"))()
+
+end)
+
+tab4:Button("Low Graphics", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/8QZGBLW8"))()
+
+end)
+
+tab4:Button("RTX",  function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/vmjZ4UY8"))()
+
+end)
+
+tab4:Section("UI")
+
+tab4:Button("Destroy UI", function()
+
+    Destroy()
+
+end)

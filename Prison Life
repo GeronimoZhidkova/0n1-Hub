@@ -1,0 +1,371 @@
+-- // Boot Library \\ --
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/mag"))()
+
+-- // Functions & Values \\ --
+
+function Destroy()
+
+game.CoreGui:FindFirstChild("MagikHax"):Destroy()
+
+end
+
+-- // Create Tabs \\ --
+
+local tab1 = Library.Category("Information", "Information", Color3.fromRGB(0, 204, 204))
+
+local tab2 = Library.Category("Main", "Main", Color3.fromRGB(0, 204, 204))
+
+local tab3 = Library.Category("Extra", "Extra", Color3.fromRGB(0, 204, 204))
+
+local tab4 = Library.Category("Player & Game", "Player & Game", Color3.fromRGB(0, 204, 204))
+
+-- // Define tab1 \\ --
+
+tab1:Section("Current Place")
+
+tab1:Button(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,function()
+
+    setclipboard(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)    
+
+end)
+
+tab1:Section("Credits")
+
+tab1:Button("Copy Discord Invite", function()
+
+    setclipboard("https://discord.gg/UnjnNVx6Tp")
+
+end)
+
+tab1:Button("YouTube Channel", function()
+
+    setclipboard("https://youtube.com/@geronimozhidkova")
+
+end)
+
+-- // Define tab2 \\ --
+
+tab2:Section("Teams")
+
+tab2:Button("Inmates",function()
+
+    workspace.Remote.TeamEvent:FireServer("Bright orange")
+
+end)
+
+tab2:Button("Officer",function()
+
+    workspace.Remote.TeamEvent:FireServer("Bright blue")
+
+end)
+
+tab2:Button("Criminal",function()
+
+    local lastPos = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").position
+
+        LCS = game.Workspace["Criminals Spawn"].SpawnLocation
+
+        LCS.CanCollide = false
+
+        LCS.Size = Vector3.new(51.05, 24.12, 54.76)
+
+        LCS.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+        LCS.Transparency = 1
+
+        wait(0.5)
+
+        LCS.CFrame = CFrame.new(-920.510803, 92.2271957, 2138.27002, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+
+        LCS.Size = Vector3.new(6, 0.2, 6)
+
+        LCS.Transparency = 0
+
+        wait()
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(lastPos)
+
+end)
+
+tab2:Button("Neutral",function()
+
+    Workspace.Remote.TeamEvent:FireServer("Medium stone grey")
+
+end)
+
+tab2:Section("Teleports")
+
+tab2:Button("Cafe",function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(879,99,2247)
+
+end)
+
+tab2:Button("Yard",function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(779,99,2477)
+
+end)
+
+tab2:Button("Armory",function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(798,99,2260)
+
+end)
+
+tab2:Button("Back",function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(980, 101, 2327)
+
+end)
+
+tab2:Button("Prison Cells",function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(910,99,2477)
+
+end)
+
+-- // Define tab3 \\ --
+
+tab3:Section("Get Items")
+
+tab3:Button("AK47",function()
+
+    local A_1 = game:GetService("Workspace")["Prison_ITEMS"].giver["AK-47"].ITEMPICKUP
+
+        local Event = game:GetService("Workspace").Remote.ItemHandler
+
+        Event:InvokeServer(A_1)
+
+end)
+
+tab3:Button("M9",function()
+
+    local A_1 = game:GetService("Workspace")["Prison_ITEMS"].giver["M9"].ITEMPICKUP
+
+        local Event = game:GetService("Workspace").Remote.ItemHandler
+
+        Event:InvokeServer(A_1)
+
+end)
+
+tab3:Button("Reminton",function()
+
+    local A_1 = game:GetService("Workspace")["Prison_ITEMS"].giver["Remington 870"].ITEMPICKUP
+
+        local Event = game:GetService("Workspace").Remote.ItemHandler
+
+        Event:InvokeServer(A_1)
+
+end)
+
+tab3:Button("M4A1",function()
+
+    local A_1 = game:GetService("Workspace")["Prison_ITEMS"].giver["M4A1"].ITEMPICKUP
+
+        local Event = game:GetService("Workspace").Remote.ItemHandler
+
+        Event:InvokeServer(A_1)
+
+end)
+
+tab3:Button("Hammer",function()
+
+    local A_1 = game:GetService("Workspace")["Prison_ITEMS"].giver["hammer"].ITEMPICKUP
+
+        local Event = game:GetService("Workspace").Remote.ItemHandler
+
+        Event:InvokeServer(A_1)
+
+end)
+
+tab3:Button("Crude Knife",function()
+
+    local A_1 = game:GetService("Workspace")["Prison_ITEMS"].single["Crude Knife"].ITEMPICKUP
+
+        local Event = game:GetService("Workspace").Remote.ItemHandler
+
+        Event:InvokeServer(A_1)
+
+end)
+
+tab3:Button("Key Card",function()
+
+    local A_1 = game:GetService("Workspace")["Prison_ITEMS"].single["Keycard"].ITEMPICKUP
+
+        local Event = game:GetService("Workspace").Remote.ItemHandler
+
+        Event:InvokeServer(A_1)
+
+end)
+
+tab3:Section("Mod Weapons")
+
+tab3:Button("AK47",function()
+
+    local player = game:GetService("Players").LocalPlayer
+
+        local gun = player.Backpack:FindFirstChild("AK-47")
+
+        local sM = require(gun:FindFirstChild("GunStates"))
+
+        sM["Damage"] = 999
+
+        sM["MaxAmmo"] = 9999991
+
+        sM["StoredAmmo"] = 9999991
+
+        sM["FireRate"] = 0.05
+
+        sM["AmmoPerClip"] = 9999991
+
+        sM["Range"] = 5000
+
+        sM["ReloadTime"] = 0.05
+
+        sM["Bullets"] = 1
+
+        sM["AutoFire"] = true
+
+end)
+
+tab3:Button("M9",function()
+
+    local player = game:GetService("Players").LocalPlayer
+
+        local gun = player.Backpack:FindFirstChild("M9")
+
+        local sM = require(gun:FindFirstChild("GunStates"))
+
+        sM["Damage"] = 999
+
+        sM["MaxAmmo"] = 9999991
+
+        sM["StoredAmmo"] = 9999991
+
+        sM["FireRate"] = 0.05
+
+        sM["AmmoPerClip"] = 9999991
+
+        sM["Range"] = 5000
+
+        sM["ReloadTime"] = 0.05
+
+        sM["Bullets"] = 1
+
+        sM["AutoFire"] = true
+
+end)
+
+tab3:Button("Reminton",function()
+
+    local player = game:GetService("Players").LocalPlayer
+
+        local gun = player.Backpack:FindFirstChild("Remington 870")
+
+        local sM = require(gun:FindFirstChild("GunStates"))
+
+        sM["Damage"] = 999
+
+        sM["MaxAmmo"] = 9999991
+
+        sM["StoredAmmo"] = 9999991
+
+        sM["FireRate"] = 0.05
+
+        sM["AmmoPerClip"] = 9999991
+
+        sM["Range"] = 5000
+
+        sM["ReloadTime"] = 0.05
+
+        sM["Bullets"] = 1
+
+        sM["AutoFire"] = true
+
+end)
+
+tab3:Button("M4A1",function()
+
+    local player = game:GetService("Players").LocalPlayer
+
+        local gun = player.Backpack:FindFirstChild("M4A1")
+
+        local sM = require(gun:FindFirstChild("GunStates"))
+
+        sM["Damage"] = 999
+
+        sM["MaxAmmo"] = 9999991
+
+        sM["StoredAmmo"] = 9999991
+
+        sM["FireRate"] = 0.05
+
+        sM["AmmoPerClip"] = 9999991
+
+        sM["Range"] = 5000
+
+        sM["ReloadTime"] = 0.05
+
+        sM["Bullets"] = 1
+
+        sM["AutoFire"] = true
+
+end)
+
+-- // Define tab4 \\ --
+
+tab4:Section("Player")
+
+tab4:Box("Walk Speed","",function(pws)
+
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = pws
+
+end)
+
+tab4:Box("Jump Power","",function(pjp)
+
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = pjp
+
+end)
+
+tab4:Box("Hip Height","",function(phh)
+
+   game.Players.LocalPlayer.Character.Humanoid.HipHeight = phh     
+
+end)
+
+tab4:Box("Gravity","",function(pg)
+
+   game.Workspace.Gravity = pg  
+
+end)
+
+tab4:Section("Game")
+
+tab4:Button("Anti Kick", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/FPfaukXN"))()
+
+end)
+
+tab4:Button("Low Graphics", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/8QZGBLW8"))()
+
+end)
+
+tab4:Button("RTX",  function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/vmjZ4UY8"))()
+
+end)
+
+tab4:Section("UI")
+
+tab4:Button("Destroy UI", function()
+
+    Destroy()
+
+end)

@@ -1,0 +1,175 @@
+-- // Boot Library \\ --
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/mag"))()
+
+-- // Functions & Values \\ --
+
+function Destroy()
+
+game.CoreGui:FindFirstChild("MagikHax"):Destroy()
+
+end
+
+-- // Create Tabs \\ --
+
+local tab1 = Library.Category("Information", "Information", Color3.fromRGB(0, 204, 204))
+
+local tab2 = Library.Category("Main", "Main", Color3.fromRGB(0, 204, 204))
+
+local tab3 = Library.Category("Player & Game", "Player & Game", Color3.fromRGB(0, 204, 204))
+
+-- // Define tab1 \\ --
+
+tab1:Section("Current Place")
+
+tab1:Button(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,function()
+
+    setclipboard(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)    
+
+end)
+
+tab1:Section("Credits")
+
+tab1:Button("Copy Discord Invite", function()
+
+    setclipboard("https://discord.gg/UnjnNVx6Tp")
+
+end)
+
+tab1:Button("YouTube Channel", function()
+
+    setclipboard("https://youtube.com/@geronimozhidkova")
+
+end)
+
+-- // Define tab2 \\ --
+
+tab2:Section("Main")
+
+tab2:Toggle("Auto Complete Obby",function(state)
+
+if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+wait(1)
+
+local Piggy=game:GetService("Workspace")["Glass Bridge"].Finish["Money Pig"]:GetDescendants()
+
+        for i=1,#Piggy do
+
+            if Piggy[i].ClassName=="TouchTransmitter" then
+
+                local MP=Piggy[i].Parent
+
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(MP.Position)*CFrame.new(0,-2.5,0)
+
+            end
+
+        end
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+tab2:Button("Show Correct Path",function()
+
+for i,v in pairs(game:GetService("Workspace")["Glass Bridge"].GlassPane:GetDescendants()) do
+
+                if v.Name == 'TouchInterest' then
+
+                v.Parent.Transparency = 1
+
+         end
+
+      end
+
+end)
+
+tab2:Button("Complete Obby",function()
+
+local Piggy=game:GetService("Workspace")["Glass Bridge"].Finish["Money Pig"]:GetDescendants()
+
+        for i=1,#Piggy do
+
+            if Piggy[i].ClassName=="TouchTransmitter" then
+
+                local MP=Piggy[i].Parent
+
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(MP.Position)*CFrame.new(0,-2.5,0)
+
+            end
+
+        end
+
+end)
+
+tab2:Button("Free VIP Room",function()
+
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(8, 101, 115))
+
+end)
+
+-- // Define tab3 \\ --
+
+tab3:Section("Player")
+
+tab3:Box("Walk Speed","",function(pws)
+
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = pws
+
+end)
+
+tab3:Box("Jump Power","",function(pjp)
+
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = pjp
+
+end)
+
+tab3:Box("Hip Height","",function(phh)
+
+   game.Players.LocalPlayer.Character.Humanoid.HipHeight = phh     
+
+end)
+
+tab3:Box("Gravity","",function(pg)
+
+   game.Workspace.Gravity = pg  
+
+end)
+
+tab3:Section("Game")
+
+tab3:Button("Anti Kick", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/FPfaukXN"))()
+
+end)
+
+tab3:Button("Low Graphics", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/8QZGBLW8"))()
+
+end)
+
+tab3:Button("RTX",  function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/vmjZ4UY8"))()
+
+end)
+
+tab3:Section("UI")
+
+tab3:Button("Destroy UI", function()
+
+    Destroy()
+
+end)

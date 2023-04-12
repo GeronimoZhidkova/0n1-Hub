@@ -1,0 +1,177 @@
+-- // Boot Library \\ --
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/mag"))()
+
+-- // Functions & Values \\ --
+
+function Destroy()
+
+game.CoreGui:FindFirstChild("MagikHax"):Destroy()
+
+end
+
+function LoadGame()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Game%20System"))()
+
+end
+
+_G.Key = "nz8nJoHA20x"
+
+_G.KeyInput = "string"
+
+-- // Create Tabs \\ --
+
+local tab1 = Library.Category("Information", "Information", Color3.fromRGB(0, 204, 204))
+
+local tab2 = Library.Category("Key System", "Key System", Color3.fromRGB(0, 204, 204))
+
+local tab3 = Library.Category("Player & Game", "Player & Game", Color3.fromRGB(0, 204, 204))
+
+-- // Define tab1 \\ --
+
+tab1:Section("Current Place")
+
+tab1:Button(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,function()
+
+    setclipboard(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)    
+
+end)
+
+tab1:Section("Credits")
+
+tab1:Button("Copy Discord Invite", function()
+
+    setclipboard("https://discord.gg/UnjnNVx6Tp")
+
+end)
+
+tab1:Button("YouTube Channel", function()
+
+    setclipboard("https://youtube.com/@geronimozhidkova")
+
+end)
+
+-- // Define tab2 \\ --
+
+tab2:Section("Key")
+
+tab2:Box("Enter Key","",function(Value)
+
+   _G.KeyInput = Value 
+
+end)
+
+tab2:Button("Check Key", function()
+
+    if _G.KeyInput == _G.Key then
+
+        game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Key System",
+
+            Text = "You've entered the correct key!"
+
+        })
+
+        LoadGame()
+
+    else
+
+        game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Key System",
+
+            Text = "Wrong Key!"
+
+        })
+
+    end
+
+end)
+
+tab2:Section("Get Key")
+
+tab2:Button("Method 1", function()
+
+    setclipboard("https://work.ink/4m8/0n1key")
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Get Key!",
+
+            Text = "Method 1 Copied to Clipboard!"
+
+    })
+
+end)
+
+tab2:Button("Method 2", function()
+
+    setclipboard("https://mboost.me/a/9_r")
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Get Key!",
+
+            Text = "Method 2 Copied to Clipboard!"
+
+    })
+
+end)
+
+-- // Define tab3 \\ --
+
+tab3:Section("Player")
+
+tab3:Box("Walk Speed","",function(pws)
+
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = pws
+
+end)
+
+tab3:Box("Jump Power","",function(pjp)
+
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = pjp
+
+end)
+
+tab3:Box("Hip Height","",function(phh)
+
+   game.Players.LocalPlayer.Character.Humanoid.HipHeight = phh     
+
+end)
+
+tab3:Box("Gravity","",function(pg)
+
+   game.Workspace.Gravity = pg  
+
+end)
+
+tab3:Section("Game")
+
+tab3:Button("Anti Kick", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/FPfaukXN"))()
+
+end)
+
+tab3:Button("Low Graphics", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/8QZGBLW8"))()
+
+end)
+
+tab3:Button("RTX",  function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/vmjZ4UY8"))()
+
+end)
+
+tab3:Section("UI")
+
+tab3:Button("Destroy UI", function()
+
+    Destroy()
+
+end)

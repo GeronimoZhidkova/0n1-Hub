@@ -176,6 +176,22 @@ tab2:Button("Master's Difficulty Chart", function()
 
 end)
 
+tab2:Button("Barry's Prison Run", function()
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Games",
+
+            Text = "Loading Barry's Prison Run..."
+
+        })
+
+        wait(0.5)
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Barry's%20Prison%20Run"))()
+
+end)
+
 
 -- // Define tab2 \\ --
 

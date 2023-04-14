@@ -192,6 +192,22 @@ tab2:Button("Barry's Prison Run", function()
 
 end)
 
+tab2:Button("Guess The Line For Admin", function()
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Games",
+
+            Text = "Loading Guess The Line For Admin Obby..."
+
+        })
+
+        wait(0.5)
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Guess%20The%20Line%20For%20Admin%20Obby"))()
+
+end)
+
 
 -- // Define tab2 \\ --
 

@@ -1,0 +1,135 @@
+-- // Boot Library \\ --
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/mag"))()
+
+-- // Functions & Values \\ --
+
+function Destroy()
+
+game.CoreGui:FindFirstChild("MagikHax"):Destroy()
+
+end
+
+-- // Create Tabs \\ --
+
+local tab1 = Library.Category("Information", "Information", Color3.fromRGB(0, 204, 204))
+
+local tab2 = Library.Category("Main", "Main", Color3.fromRGB(0, 204, 204))
+
+local tab3 = Library.Category("Player & Game", "Player & Game", Color3.fromRGB(0, 204, 204))
+
+-- // Define tab1 \\ --
+
+tab1:Section("Current Place")
+
+tab1:Button(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,function()
+
+    setclipboard(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)    
+
+end)
+
+tab1:Section("Credits")
+
+tab1:Button("Copy Discord Invite", function()
+
+    setclipboard("https://discord.gg/UnjnNVx6Tp")
+
+end)
+
+tab1:Button("YouTube Channel", function()
+
+    setclipboard("https://youtube.com/channel/UCIx5z7_DSzgYUR8oBf6x57w")
+
+end)
+
+-- // Define tab2 \\ --
+
+tab2:Section("Obby")
+
+tab2:Button("Complete Obby", function()
+
+    wait(0.5)
+
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-35,644,-6))
+
+end)
+
+tab2:Toggle("Auto Complete Obby",function(state)
+
+if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+    wait(0.5)
+
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-35,644,-6))
+
+    wait(1)
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+-- // Define tab3 \\ --
+
+tab3:Section("Player")
+
+tab3:Box("Walk Speed","",function(pws)
+
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = pws
+
+end)
+
+tab3:Box("Jump Power","",function(pjp)
+
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = pjp
+
+end)
+
+tab3:Box("Hip Height","",function(phh)
+
+   game.Players.LocalPlayer.Character.Humanoid.HipHeight = phh     
+
+end)
+
+tab3:Box("Gravity","",function(pg)
+
+   game.Workspace.Gravity = pg  
+
+end)
+
+tab3:Section("Game")
+
+tab3:Button("Anti Kick", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/FPfaukXN"))()
+
+end)
+
+tab3:Button("Low Graphics", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/8QZGBLW8"))()
+
+end)
+
+tab3:Button("RTX",  function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/vmjZ4UY8"))()
+
+end)
+
+tab3:Section("UI")
+
+tab3:Button("Destroy UI", function()
+
+    Destroy()
+
+end)

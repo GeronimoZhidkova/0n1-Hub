@@ -48,7 +48,7 @@ end)
 
 tab1:Button("YouTube Channel", function()
 
-    setclipboard("https://youtube.com/@geronimozhidkova")
+    setclipboard("https://youtube.com/channel/UCIx5z7_DSzgYUR8oBf6x57w")
 
 end)
 

@@ -208,6 +208,21 @@ tab2:Button("GuessTheLineForAdmin", function()
 
 end)
 
+tab2:Button("Stairs Of Rage", function()
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Games",
+
+            Text = "Loading Stairs Of Rage..."
+
+        })
+
+        wait(0.5)
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Stairs%20Of%20Rage"))()
+
+end)
 
 -- // Define tab2 \\ --
 

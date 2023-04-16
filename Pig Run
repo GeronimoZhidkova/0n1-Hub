@@ -1,0 +1,361 @@
+-- // Boot Library \\ --
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/mag"))()
+
+-- // Functions & Values \\ --
+
+function Destroy()
+
+game.CoreGui:FindFirstChild("MagikHax"):Destroy()
+
+end
+
+-- // Create Tabs \\ --
+
+local tab1 = Library.Category("Information", "Information", Color3.fromRGB(0, 204, 204))
+
+local tab2 = Library.Category("Auto Farms", "Auto Farms", Color3.fromRGB(0, 204, 204))
+
+local tab3 = Library.Category("Pets", "Pets", Color3.fromRGB(0, 204, 204))
+
+local tab4 = Library.Category("Player & Game", "Player & Game", Color3.fromRGB(0, 204, 204))
+
+-- // Define tab1 \\ --
+
+tab1:Section("Current Place")
+
+tab1:Button(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,function()
+
+    setclipboard(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)    
+
+end)
+
+tab1:Section("Credits")
+
+tab1:Button("Copy Discord Invite", function()
+
+    setclipboard("https://discord.gg/UnjnNVx6Tp")
+
+end)
+
+tab1:Button("YouTube Channel", function()
+
+    setclipboard("https://youtube.com/@geronimozhidkova")
+
+end)
+
+-- // Define tab2 \\ --
+
+tab2:Section("Main")
+
+tab2:Toggle("Auto Rebirth",function(state)
+
+if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+local Event = game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.UpdateRebirth
+
+Event:FireServer()
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+tab2:Toggle("Auto Click",function(state)
+
+if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+                local args = {
+
+    [1] = "Click"
+
+}
+
+game:GetService("Players"):WaitForChild("ThatGIitches"):WaitForChild("PlayerGui"):WaitForChild("PunchV2"):WaitForChild("Function"):FireServer(unpack(args))    
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+tab2:Toggle("Auto Run",function(state)
+
+if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+               game:GetService("ReplicatedStorage"):WaitForChild("GameClient"):WaitForChild("Events"):WaitForChild("RemoteEvent"):WaitForChild("AFKmodeEvent"):FireServer()     
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+tab2:Toggle("Auto Open Chest",function(state)
+
+if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+                   game:GetService("ReplicatedStorage"):WaitForChild("GameClient"):WaitForChild("Events"):WaitForChild("RemoteEvent"):WaitForChild("RedeemChest"):FireServer() 
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+-- // Define tab3 \\ --
+
+tab3:Section("Main")
+
+tab3:Toggle("Common Egg",function(state)
+
+if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+local A_1 = "Common Egg"
+
+local Event = game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg
+
+Event:InvokeServer(A_1)
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+tab3:Toggle("Forest Egg",function(state)
+
+if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+local A_1 = "Forest Egg"
+
+local Event = game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg
+
+Event:InvokeServer(A_1)
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+tab3:Toggle("Volcano Egg",function(state)
+
+if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+local A_1 = "Volcano Egg"
+
+local Event = game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg
+
+Event:InvokeServer(A_1)
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+tab3:Toggle("Ocean Egg",function(state)
+
+if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+local A_1 = "Ocean Egg"
+
+local Event = game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg
+
+Event:InvokeServer(A_1)
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+tab3:Toggle("Angel Egg",function(state)
+
+if state then
+
+           _G.loop = true
+
+           while _G.loop == true do wait()
+
+local A_1 = "Angel Egg"
+
+local Event = game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg
+
+Event:InvokeServer(A_1)
+
+           end
+
+        else
+
+           _G.loop = false
+
+        end
+
+end)
+
+-- // Define tab4 \\ --
+
+tab4:Section("Player")
+
+tab4:Box("Walk Speed","",function(pws)
+
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = pws
+
+end)
+
+tab4:Box("Jump Power","",function(pjp)
+
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = pjp
+
+end)
+
+tab4:Box("Hip Height","",function(phh)
+
+   game.Players.LocalPlayer.Character.Humanoid.HipHeight = phh     
+
+end)
+
+tab4:Box("Gravity","",function(pg)
+
+   game.Workspace.Gravity = pg  
+
+end)
+
+tab4:Button("No Clip", function()
+
+    local Noclip = nil
+
+local Clip = nil
+
+function noclip()
+
+	Clip = false	local function Nocl()
+
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+
+					v.CanCollide = false
+
+				end
+
+			end
+
+		end
+
+		wait(0.21) -- basic optimization
+
+	end
+
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+
+end
+
+function clip()
+
+	if Noclip then Noclip:Disconnect() end
+
+	Clip = true
+
+end
+
+noclip() 
+
+end)
+
+tab4:Section("Game")
+
+tab4:Button("Anti Kick", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/FPfaukXN"))()
+
+end)
+
+tab4:Button("Low Graphics", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/8QZGBLW8"))()
+
+end)
+
+tab4:Button("RTX",  function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/vmjZ4UY8"))()
+
+end)
+
+tab4:Section("UI")
+
+tab4:Button("Destroy UI", function()
+
+    Destroy()
+
+end)

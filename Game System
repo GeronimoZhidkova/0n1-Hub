@@ -311,7 +311,7 @@ tab4:Box("Gravity","",function(pg)
    game.Workspace.Gravity = pg  
 
 end)
-tab3:Button("No Clip", function()
+tab4:Button("No Clip", function()
 
     local Noclip = nil
 

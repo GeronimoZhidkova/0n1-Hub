@@ -224,6 +224,22 @@ tab2:Button("Stairs Of Rage", function()
 
 end)
 
+tab2:Button("Pig Run", function()
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Games",
+
+            Text = "Loading Pig Run..."
+
+        })
+
+        wait(0.5)
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Pig%20Run"))()
+
+end)
+
 -- // Define tab2 \\ --
 
 tab3:Section("Mobile")

@@ -16,7 +16,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-
 
 end
 
-_G.Key = "LI8abh771nJs81"
+_G.Key = "0n1-Nx982Nii87"
 
 _G.KeyInput = "string"
 

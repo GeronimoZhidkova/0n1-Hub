@@ -246,6 +246,22 @@ tab2:Button("Pig Run", function()
 
 end)
 
+tab2:Button("Mega Easy Obby", function()
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Games",
+
+            Text = "Loading Mega Easy Obby..."
+
+        })
+
+        wait(0.5)
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Mega%20Easy%20Obby"))()
+
+end)
+
 -- // Define tab2 \\ --
 
 tab3:Section("Mobile")

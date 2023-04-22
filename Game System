@@ -262,6 +262,22 @@ tab2:Button("Mega Easy Obby", function()
 
 end)
 
+tab2:Button("Fat Simulator", function()
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Games",
+
+            Text = "Loading Fat Simulator..."
+
+        })
+
+        wait(0.5)
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Fat%20Simulator"))()
+
+end)
+
 -- // Define tab2 \\ --
 
 tab3:Section("Mobile")

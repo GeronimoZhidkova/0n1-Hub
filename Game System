@@ -278,6 +278,22 @@ tab2:Button("Fat Simulator", function()
 
 end)
 
+tab2:Button("Ninja Legends", function()
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+            Title = "Games",
+
+            Text = "Loading Ninja Legends..."
+
+        })
+
+        wait(0.5)
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Ninja%20Legends"))()
+
+end)
+
 -- // Define tab2 \\ --
 
 tab3:Section("Mobile")

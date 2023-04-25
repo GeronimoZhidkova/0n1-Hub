@@ -12,7 +12,7 @@ end
 
 function LoadGame()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Game%20System"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-Hub/main/Game%20System%202"))()
 
 end
 

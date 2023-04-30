@@ -1,173 +1,135 @@
 -- // Boot Library \\ --
-
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/mag"))()
 
 -- // Functions & Values \\ --
-
 function Destroy()
-
 game.CoreGui:FindFirstChild("MagikHax"):Destroy()
-
 end
 
 -- // Create Tabs \\ --
-
 local tab1 = Library.Category("Information", "Information", Color3.fromRGB(0, 204, 204))
-
 local tab2 = Library.Category("Main", "Main", Color3.fromRGB(0, 204, 204))
-
 local tab3 = Library.Category("Pets", "Pets", Color3.fromRGB(0, 204, 204))
-
 local tab4 = Library.Category("Player & Game", "Player & Game", Color3.fromRGB(0, 204, 204))
 
 -- // Define tab1 \\ --
 tab1:Section("Script Version")
 
 tab1:Button("0n1 Hub V5",function()
-
     
-
 end)
+
 tab1:Section("Current Place")
 
 tab1:Button(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,function()
-
     setclipboard(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)    
-
 end)
 
 tab1:Section("Credits")
 
 tab1:Button("Copy Discord Invite", function()
-
     setclipboard("https://discord.gg/UnjnNVx6Tp")
-
 end)
 
 tab1:Button("YouTube Channel", function()
-
-    setclipboard("https://youtube.com/channel/UCIx5z7_DSzgYUR8oBf6x57w")
-
+    setclipboard("https://youtube.com/@geronimozhidkova")
 end)
 
 -- // Define tab2 \\ --
-
 tab2:Section("Spawn World")
 
 tab2:Toggle("Auto Finish Obby", function(state)
-
     if state then
-
            _G.loop = true
-
            while _G.loop == true do wait()
-
            wait(1)
-
     game.Players.LocalPlayer.Character:MoveTo(Vector3.new(200,-5,211))
-
     wait(0.6)
-
     game.Players.LocalPlayer.Character:MoveTo(Vector3.new(200,1266,-871))
-
     wait(0.6)
-
     game.Players.LocalPlayer.Character:MoveTo(Vector3.new(200,1266,-987))
-
     wait(5)
-
            end
-
         else
-
            _G.loop = false
-
         end
-
 end)
 
 tab2:Button("Finish Obby", function()
-
 wait(1)
-
     game.Players.LocalPlayer.Character:MoveTo(Vector3.new(200,-5,211))
-
     wait(0.6)
-
     game.Players.LocalPlayer.Character:MoveTo(Vector3.new(200,1266,-871))
-
     wait(0.6)
-
     game.Players.LocalPlayer.Character:MoveTo(Vector3.new(200,1266,-987))
-
     wait(5)
-
 end)
 
 tab2:Section("Candy World")
 
 tab2:Toggle("Auto Finish Obby", function(state)
-
     if state then
-
            _G.loop = true
-
            while _G.loop == true do wait()
-
            wait(1)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3168,-5,210))
-
 wait(0.6)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3168,2480,-626))
-
 wait(0.6)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3168,2482,-655))
-
 wait(5)
-
            end
-
         else
-
            _G.loop = false
-
         end
-
 end)
 
 tab2:Button("Finish Obby", function()
-
 wait(1)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3168,-5,210))
-
 wait(0.6)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3168,2480,-626))
-
 wait(0.6)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3168,2482,-655))
-
 wait(5)
+end)
 
+tab2:Section("Medieval World")
+
+tab2:Toggle("Auto Finish Obby", function(state)
+    if state then
+           _G.loop = true
+           while _G.loop == true do wait()
+           wait(1)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-11125,34,224))
+wait(0.6)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-11125,2064,-337))
+wait(0.6)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-11125,2064,-367))
+wait(5)
+           end
+        else
+           _G.loop = false
+        end
+end)
+
+tab2:Button("Finish Obby", function()
+wait(1)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-11125,34,224))
+wait(0.6)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-11125,2064,-337))
+wait(0.6)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-11125,2064,-367))
+wait(5)
 end)
 
 -- // Define tab3 \\ --
-
 tab3:Section("Spawn World")
 
 tab3:Toggle("Grass Egg", function(state)
-
     if state then
-
            _G.loop = true
-
            while _G.loop == true do wait()
-
            local args = {
 
     [1] = "Grass Egg",
@@ -179,25 +141,16 @@ tab3:Toggle("Grass Egg", function(state)
  
 
 game:GetService("ReplicatedStorage"):WaitForChild("RecodeRemotes"):WaitForChild("BuyEgg"):InvokeServer(unpack(args))   
-
            end
-
         else
-
            _G.loop = false
-
         end
-
 end)
 
 tab3:Toggle("Jungle Egg", function(state)
-
     if state then
-
            _G.loop = true
-
            while _G.loop == true do wait()
-
            local args = {
 
     [1] = "Jungle Egg",
@@ -211,23 +164,15 @@ tab3:Toggle("Jungle Egg", function(state)
 game:GetService("ReplicatedStorage"):WaitForChild("RecodeRemotes"):WaitForChild("BuyEgg"):InvokeServer(unpack(args))             
 
            end
-
         else
-
            _G.loop = false
-
         end
-
 end)
 
 tab3:Toggle("Noob Egg", function(state)
-
     if state then
-
            _G.loop = true
-
            while _G.loop == true do wait()
-
            local args = {
 
     [1] = "Noob Egg",
@@ -241,25 +186,18 @@ tab3:Toggle("Noob Egg", function(state)
 game:GetService("ReplicatedStorage"):WaitForChild("RecodeRemotes"):WaitForChild("BuyEgg"):InvokeServer(unpack(args))              
 
            end
-
         else
-
            _G.loop = false
-
         end
-
 end)
+
 
 tab3:Section("Candy World")
 
 tab3:Toggle("Demonic Egg", function(state)
-
     if state then
-
            _G.loop = true
-
            while _G.loop == true do wait()
-
            local args = {
 
     [1] = "Demonic Egg",
@@ -273,23 +211,15 @@ tab3:Toggle("Demonic Egg", function(state)
 game:GetService("ReplicatedStorage"):WaitForChild("RecodeRemotes"):WaitForChild("BuyEgg"):InvokeServer(unpack(args))
 
            end
-
         else
-
            _G.loop = false
-
         end
-
 end)
 
 tab3:Toggle("Hell Egg", function(state)
-
     if state then
-
            _G.loop = true
-
            while _G.loop == true do wait()
-
                  local args = {
 
     [1] = "Hell Egg",
@@ -303,109 +233,83 @@ tab3:Toggle("Hell Egg", function(state)
 game:GetService("ReplicatedStorage"):WaitForChild("RecodeRemotes"):WaitForChild("BuyEgg"):InvokeServer(unpack(args))
 
            end
-
         else
-
            _G.loop = false
-
         end
-
 end)
 
--- // Define tab4 \\ --
+tab3:Section("Medieval World")
 
+tab3:Toggle("Mythology Egg", function(state)
+    if state then
+           _G.loop = true
+           while _G.loop == true do wait()
+           local args = {
+    [1] = "Mythology Egg",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RecodeRemotes"):WaitForChild("BuyEgg"):InvokeServer(unpack(args))
+
+           end
+        else
+           _G.loop = false
+        end
+end)
+
+tab3:Toggle("Dragon Egg", function(state)
+    if state then
+           _G.loop = true
+           while _G.loop == true do wait()
+           local args = {
+    [1] = "Dragon Egg",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RecodeRemotes"):WaitForChild("BuyEgg"):InvokeServer(unpack(args))
+
+           end
+        else
+           _G.loop = false
+        end
+end)
+
+
+-- // Define tab4 \\ --
 tab4:Section("Player")
 
 tab4:Box("Walk Speed","",function(pws)
-
    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = pws
-
 end)
 
 tab4:Box("Jump Power","",function(pjp)
-
    game.Players.LocalPlayer.Character.Humanoid.JumpPower = pjp
-
 end)
 
 tab4:Box("Hip Height","",function(phh)
-
    game.Players.LocalPlayer.Character.Humanoid.HipHeight = phh     
-
 end)
 
 tab4:Box("Gravity","",function(pg)
-
    game.Workspace.Gravity = pg  
-
 end)
-tab4:Button("No Clip", function()
 
-    local Noclip = nil
-
-local Clip = nil
-
-function noclip()
-
-	Clip = false	local function Nocl()
-
-		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
-
-			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-
-				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
-
-					v.CanCollide = false
-
-				end
-
-			end
-
-		end
-
-		wait(0.21) -- basic optimization
-
-	end
-
-	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
-
-end
-
-function clip()
-
-	if Noclip then Noclip:Disconnect() end
-
-	Clip = true
-
-end
-
-noclip() 
-
-end)
 tab4:Section("Game")
 
 tab4:Button("Anti Kick", function()
-
     loadstring(game:HttpGet("https://pastebin.com/raw/FPfaukXN"))()
-
 end)
 
 tab4:Button("Low Graphics", function()
-
     loadstring(game:HttpGet("https://pastebin.com/raw/8QZGBLW8"))()
-
 end)
 
 tab4:Button("RTX",  function()
-
     loadstring(game:HttpGet("https://pastebin.com/raw/vmjZ4UY8"))()
-
 end)
 
 tab4:Section("UI")
 
 tab4:Button("Destroy UI", function()
-
     Destroy()
-
 end)

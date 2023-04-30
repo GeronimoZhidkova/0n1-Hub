@@ -1,297 +1,153 @@
 -- // Boot Library \\ --
-
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/mag"))()
 
 -- // Functions & Values \\ --
-
 function Destroy()
-
 game.CoreGui:FindFirstChild("MagikHax"):Destroy()
-
 end
 
 -- // Create Tabs \\ --
-
 local tab1 = Library.Category("Information", "Information", Color3.fromRGB(0, 204, 204))
-
 local tab2 = Library.Category("Obby Farms", "Obby Farms", Color3.fromRGB(0, 204, 204))
-
 local tab3 = Library.Category("Player & Game", "Player & Game", Color3.fromRGB(0, 204, 204))
 
 -- // Define tab1 \\ --
-tab1:Section("Script Version")
-
-tab1:Button("0n1 Hub V5",function()
-
-    
-
-end)
 tab1:Section("Current Place")
 
 tab1:Button(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,function()
-
     setclipboard(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)    
-
 end)
 
 tab1:Section("Credits")
 
 tab1:Button("Copy Discord Invite", function()
-
     setclipboard("https://discord.gg/UnjnNVx6Tp")
-
 end)
 
 tab1:Button("YouTube Channel", function()
-
-    setclipboard("https://youtube.com/channel/UCIx5z7_DSzgYUR8oBf6x57w")
-
+    setclipboard("https://youtube.com/@geronimozhidkova")
 end)
 
 -- // Define tab2 \\ --
-
 tab2:Section("Main Obby")
 
 tab2:Button("Complete",function()
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1542,140,-108))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3331,180,-109))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-5226,205,-109))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-5430,338,1348))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3986,531,1937))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3378,796,781))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-4697,1145,221))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-5166,1355,1494))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3670,1812,1333))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-4649,2422,394))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-4249,2919,1505))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-4576,3395,657))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3942,3770,1176))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-4883,4493,818))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3790,5003,1601))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-4185,5606,349))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-5050,6070,1588))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3435,6806,1593))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-4427,7524,266))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-4441,7524,256))
-
 end)
 
 tab2:Section("Monthly Obby")
 
 tab2:Button("Complete",function()
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(724,267,-985))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(724,406,-1856))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(724,651,-2668))
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(724,651,-2679))
-
 end)
 
 tab2:Section("Pro Obby")
 
 tab2:Button("Complete",function()
-
 wait(0.5)
-
-game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1608,470,-109))
-
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(824,139,-109))
 wait(0.5)
-
-game.Players.LocalPlayer.Character:MoveTo(Vector3.new(2501,687,-110))
-
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1583,465,-109))
 wait(0.5)
-
-game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3344,972,-109))
-
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(2493,620,-110))
 wait(0.5)
-
-game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3354,972,-109))
-
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3397,830,-109))
+wait(0.5)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3408,830,-109))
 end)
 
 tab2:Section("Experimental Challenge")
 
 tab2:Button("Complete",function()
-
 wait(0.5)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(878,166,53))
-
 wait(1)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(724,180,179))
-
 wait(1)
-
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(615,193,53))
-
 end)
 
 -- // Define tab3 \\ --
-
 tab3:Section("Player")
 
 tab3:Box("Walk Speed","",function(pws)
-
    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = pws
-
 end)
 
 tab3:Box("Jump Power","",function(pjp)
-
    game.Players.LocalPlayer.Character.Humanoid.JumpPower = pjp
-
 end)
 
 tab3:Box("Hip Height","",function(phh)
-
    game.Players.LocalPlayer.Character.Humanoid.HipHeight = phh     
-
 end)
 
 tab3:Box("Gravity","",function(pg)
-
    game.Workspace.Gravity = pg  
-
 end)
-tab3:Button("No Clip", function()
 
-    local Noclip = nil
-
-local Clip = nil
-
-function noclip()
-
-	Clip = false	local function Nocl()
-
-		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
-
-			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-
-				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
-
-					v.CanCollide = false
-
-				end
-
-			end
-
-		end
-
-		wait(0.21) -- basic optimization
-
-	end
-
-	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
-
-end
-
-function clip()
-
-	if Noclip then Noclip:Disconnect() end
-
-	Clip = true
-
-end
-
-noclip() 
-
-end)
 tab3:Section("Game")
 
 tab3:Button("Anti Kick", function()
-
     loadstring(game:HttpGet("https://pastebin.com/raw/FPfaukXN"))()
-
 end)
 
 tab3:Button("Low Graphics", function()
-
     loadstring(game:HttpGet("https://pastebin.com/raw/8QZGBLW8"))()
-
 end)
 
 tab3:Button("RTX",  function()
-
     loadstring(game:HttpGet("https://pastebin.com/raw/vmjZ4UY8"))()
-
 end)
 
 tab3:Section("UI")
 
 tab3:Button("Destroy UI", function()
-
     Destroy()
-
 end)

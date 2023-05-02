@@ -16,7 +16,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/0n1-
 
 end
 
-_G.Key = "0n1-Nx982Nii87"
+_G.Key = "0n1-Own8Nwia0ss7"
 
 _G.KeyInput = "string"
 
@@ -98,34 +98,19 @@ end)
 
 tab2:Section("Get Key")
 
-tab2:Button("Method 1", function()
+tab2:Button("Copy Link", function()
 
-    setclipboard("https://work.ink/4m8/0n1key")
-
-    game:GetService("StarterGui"):SetCore("SendNotification",{
-
-            Title = "Get Key!",
-
-            Text = "Method 1 Copied to Clipboard!"
-
-    })
-
-end)
-
-tab2:Button("Method 2", function()
-
-    setclipboard("https://mboost.me/a/9_r")
+    setclipboard("https://discord.gg/UnjnNVx6Tp")
 
     game:GetService("StarterGui"):SetCore("SendNotification",{
 
             Title = "Get Key!",
 
-            Text = "Method 2 Copied to Clipboard!"
+            Text = "Invite Copied to Clipboard!"
 
     })
 
 end)
-
 -- // Define tab3 \\ --
 
 tab3:Section("Player")
